@@ -1,0 +1,17 @@
+{
+    "name": "beer-rating-finder",
+    "version": "0.0.1",
+    "description": "See beer ratings directly from stores!",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["alko.fi"],
+            "js": ["content.js"]
+        } 
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "manifest_version": 2
+}
