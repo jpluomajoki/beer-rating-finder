@@ -5,7 +5,7 @@
     "permissions": ["storage", "activeTab", "declarativeContent"],
     "content_scripts": [
         {
-            "matches": ["*://www.alko.fi/*tuotteet", "*://www.alko.fi/*products", "*://www.alko.fi/*produkter"],
+            "matches": ["*://www.alko.fi"],
             "js": ["content.js"],
             "run_at": "document_idle"
         } 
