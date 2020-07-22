@@ -1,18 +1,21 @@
 {
-    "name": "beer-rating-finder",
-    "version": "0.0.1",
-    "description": "See beer ratings directly from stores!",
-    "permissions": ["storage", "activeTab", "declarativeContent"],
-    "content_scripts": [
-        {
-            "matches": ["*://www.alko.fi"],
-            "js": ["content.js"],
-            "run_at": "document_idle"
-        } 
-    ],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "manifest_version": 2
+  "name": "beer-rating-finder",
+  "version": "0.0.1",
+  "description": "See beer ratings directly from stores!",
+  "permissions": ["storage", "activeTab", "declarativeContent"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.alko.fi/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "icons/*"
+  ],
+  "manifest_version": 2
 }
