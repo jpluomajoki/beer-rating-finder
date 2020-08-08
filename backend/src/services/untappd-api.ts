@@ -42,11 +42,12 @@ export const findBeer = async (beerName: string): Promise<any> => {
     .then((response) => {
       console.log(response.data.response.beer);
       const {
+        bid,
         beer_name,
         rating_count,
         rating_score,
       } = response.data.response.beer;
-      return { beer_name, rating_score, rating_count };
+      return { bid, beer_name, rating_score, rating_count };
     })
     .catch((e) => {
       console.error(e);
